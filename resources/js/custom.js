@@ -34,6 +34,12 @@ $(document).ready(function () {
         });
     });
 
+    $('.delete-record').on("click", function () {
+        if (confirm("Are You Sure to delete this")) {
+            $(this).parent('.destroy-form').submit();
+        }
+    });
+
     function clearFields() {
         $('.company-name').text('');
         $('.company-email').text('');

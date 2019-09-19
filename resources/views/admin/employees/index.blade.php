@@ -45,15 +45,13 @@
                                         |
                                         <a href="{{ route('employees.edit', $employee->id) }}" class="fa fa-edit"></a>
                                         |
-                                        <a href="{{ route('employees.destroy', $employee->id) }}" class="fa fa-trash"
-                                           onclick="return actionConfirm();"
-                                        ></a>
-
-                                        <form id="destroy-form" action="{{ route('employees.destroy', $employee->id) }}"
+                                        <form class="destroy-form"
+                                              action="{{ route('employees.destroy', $employee->id) }}"
                                               method="POST"
-                                              style="display: none;">
+                                              style="display: inline;">
                                             @method('DELETE')
                                             @csrf
+                                            <a href="#" class="fa fa-trash delete-record"></a>
                                         </form>
                                     </td>
                                 </tr>
@@ -111,14 +109,4 @@
             </div>
         </div>
     </div>
-    <script>
-        function actionConfirm() {
-            if (!confirm("Are You Sure to delete this")) {
-                event.preventDefault();
-            } else {
-                event.preventDefault();
-                document.getElementById('destroy-form').submit();
-            }
-        }
-    </script>
 @endsection
