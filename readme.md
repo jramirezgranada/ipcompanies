@@ -19,7 +19,7 @@ Code Challenge for InteracPedia, Follow instructions to setup development enviro
 - Run `php artisan key:generate`
 - Run `php artisan db:seed`
 - If you want Companies data you can run `php artisan db:seed --class=CompaniesTableSeeder`
-- Run `npm install` to install frontend dependecies like jQuery, Bootstrap and AdminLTE template.
+- Run `npm install` to install frontend dependencies like jQuery, Bootstrap and AdminLTE template.
 - Run `npm run dev`
 - `boostrap/cache` and `storage` folder needs to have writable permissions (775).
 - or `sudo chown -R www-data:www-data /path/to/your/laravel/root/directory`
