@@ -4,6 +4,7 @@ namespace App\Http\Helpers;
 
 use App\Company;
 use App\Mail\CompanyRegistered;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class CompanyHelper
@@ -21,7 +22,13 @@ class CompanyHelper
         }
 
         $company = Company::create($data);
-        Mail::to(auth()->user())->send(new CompanyRegistered($company));
+
+        try {
+            Mail::to(auth()->user())->send(new CompanyRegistered($company));
+        } catch (\Exception $e) {
+            Log::info($e->getMessage());
+        }
+
 
     }
 
