@@ -24,8 +24,6 @@
     <div class="login-box-body">
         <p>
             Repository: <a href="https://github.com/jramirezgranada/ipcompanies">https://github.com/jramirezgranada/ipcompanies</a><br><br>
-            User: admin@admin.com <br><br>
-            Pass: password <br><br>
             <a href="{{ route('home') }}" class="btn btn-success">Go To Demo</a>
         </p>
     </div>
