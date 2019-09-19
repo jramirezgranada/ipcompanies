@@ -107,10 +107,9 @@
     </div>
     <script>
         function actionConfirm() {
+            event.preventDefault();
             if (!confirm("Are You Sure to delete this")) {
-                event.preventDefault();
             } else {
-                event.preventDefault();
                 document.getElementById('destroy-form').submit();
             }
         }
